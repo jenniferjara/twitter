@@ -18,3 +18,7 @@
 2. Si pasa los 120 caracteres, mostrar el contador con OTRO color.
 3. Si pasa los 130 caracteres, mostrar el contador con OTRO color.
 4. si pasa los 140 caracteres, mostrar el contador en negativo.
+
+##v0.0.3
+
+1. Al presionar enter ("/n") el textarea debe crecer de acuerdo al tanaño del texto.

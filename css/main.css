@@ -38,6 +38,7 @@ body {
 	background-color: #000;
 	color: #fff;
 }
+/*--Contador--*/
 .nuevoMensaje {
     color: #fff;
     font-weight: bold;
@@ -46,7 +47,7 @@ body {
     padding: 1%;
     width: 80%;
 }
-/*--Contador--*/
+/*---colores---*/
 .green {
 	color: #04B404;
 	font-weight: bold;
@@ -57,6 +58,14 @@ body {
 }
 .red {
 	color: #FF0000;
+	font-weight: bold;
+    font-size: 1.2em;
+    margin: 1.5% auto;
+    padding: 1%;
+    width: 80%;
+}
+.orange {
+	color: #FF4000;
 	font-weight: bold;
     font-size: 1.2em;
     margin: 1.5% auto;

@@ -2,13 +2,12 @@ window.addEventListener("load", function() {
 	var boton = document.getElementById("boton");
 	var textArea = document.getElementById("textArea");
 	boton.addEventListener("click", function(e) {
-        e.preventDefault();//para que no aparezca en la url a pesar que es tipo submit
+        e.preventDefault(); //para que no aparezca en la url a pesar que es tipo submit
 		var text = textArea.value;
 		mensaje(text);
 		textArea.value = "";
 		boton.disabled = true;
 	});
-	
 	function mensaje (text) {
         var div = document.createElement("div");
         div.className = "nuevoMensaje";
@@ -34,7 +33,7 @@ window.addEventListener("load", function() {
 		if (longitud >= 120 && longitud <= 129){
 			contador.classList.add("green");
 			contador.classList.remove("red");
-		}else if (longitud >=130 && longitud <= 140){
+		}else if (longitud >=130 && longitud <= maxCaracteres){
 			contador.classList.add("red");
 		}else {
 			contador.classList.remove("green", "red");
@@ -44,4 +43,13 @@ window.addEventListener("load", function() {
 			boton.disabled = true;
 		};
 	});
+
+	textArea.addEventListener('keydown', autosize); 
+	function autosize(){
+	  var el = this;
+	  setTimeout(function(){
+	    el.style.cssText = 'height:auto; padding:0';
+	    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+	  },0);
+	}
 });
