@@ -43,7 +43,7 @@ window.addEventListener("load", function() {
 			boton.disabled = true;
 		};
 	});
-
+// textarea grow with text
 	textArea.addEventListener("keydown", autosize); 
 	function autosize(){
 	  var el = this;

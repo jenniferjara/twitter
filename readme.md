@@ -22,3 +22,7 @@
 ##v0.0.4
 
 1. Al presionar enter ("/n") el textarea debe crecer de acuerdo al tanaño del texto.
+
+##v0.0.5
+
+1. Si la cantidad de caracteres ingresados (sin dar un enter), supera el tamaño del textarea por defecto, debe agragarse una línea más para que no parezca el scroll.
