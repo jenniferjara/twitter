@@ -1,0 +1,48 @@
+html, body {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	font-family: Courier;
+	font-size: 16px;
+}
+body {
+	background-image: url(../img/wall-12.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-size: cover;
+}
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.content{
+    width: 50%;
+	background-color: rgba(40,10,40,0.5);
+	padding: 5%;
+	text-align: center;
+	color: white;
+    border-radius: 5px;
+}
+.content textarea {
+	width: 80%;
+	margin-bottom: 3%;
+}
+.btn{
+	padding: 2% 3%;
+	cursor: pointer;
+}
+.btn:hover {
+	background-color: #000;
+	color: #fff;
+}
+.nuevoMensaje {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 1.5% auto;
+    padding: 1%;
+    width: 80%
+}
