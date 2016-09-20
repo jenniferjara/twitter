@@ -26,3 +26,7 @@
 ##v0.0.5
 
 1. Si la cantidad de caracteres ingresados (sin dar un enter), supera el tamaño del textarea por defecto, debe agragarse una línea más para que no parezca el scroll.
+
+##v0.0.6
+
+1. Agregar la hora en que se publico el tweet, en formato de 24 horas _hh:mm_ .

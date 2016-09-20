@@ -7,16 +7,21 @@ window.addEventListener("load", function() {
 		mensaje(text);
 		textArea.value = "";
 		boton.disabled = true;
+		regular();
 	});
 	function mensaje (text) {
+		//insertar texto
         var div = document.createElement("div");
         div.className = "nuevoMensaje";
         var contenedor = document.getElementById("mensajes");
-        div.innerText = text;
-        contenedor.insertBefore(div,contenedor.childNodes[0])
+        //insertar hora de tweet
+        var n = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
+
+        div.innerText = text+ " " + n;
+        contenedor.insertBefore(div,contenedor.childNodes[0]);
 	}
 
-	textArea.addEventListener("keydown", function(){
+	textArea.addEventListener("keydown", function(e){
 		boton.disabled = false;
 		var maxCaracteres = 140;
 		var valor = document.getElementById("textArea").value;
@@ -43,13 +48,17 @@ window.addEventListener("load", function() {
 			boton.disabled = true;
 		};
 	});
-// textarea grow with text
+
 	textArea.addEventListener("keydown", autosize); 
+
 	function autosize(){
 	  var el = this;
 	  setTimeout(function(){
 	    el.style.cssText = "height:auto; padding:0";
 	    el.style.cssText = "height:" + el.scrollHeight + 'px';
 	  },0);
+	}
+	function regular(){
+		textArea.style.cssText = "height:auto";
 	}
 });
