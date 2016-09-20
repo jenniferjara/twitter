@@ -44,12 +44,22 @@ body {
     font-size: 1.2em;
     margin: 1.5% auto;
     padding: 1%;
-    width: 80%
+    width: 80%;
 }
 /*--Contador--*/
 .green {
 	color: #04B404;
+	font-weight: bold;
+    font-size: 1.2em;
+    margin: 1.5% auto;
+    padding: 1%;
+    width: 80%;
 }
 .red {
 	color: #FF0000;
+	font-weight: bold;
+    font-size: 1.2em;
+    margin: 1.5% auto;
+    padding: 1%;
+    width: 80%;
 }

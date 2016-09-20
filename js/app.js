@@ -24,10 +24,24 @@ window.addEventListener("load", function() {
 		var longitud = valor.length;
 		var contador = document.getElementById("contador");
 		//contador.className = "nuevoMensaje";
+
 		if(longitud < maxCaracteres){
 			contador.innerText = maxCaracteres - longitud;
 		}else {
 			contador.innerText = maxCaracteres - longitud;
+		};
+		//cambio de color
+		if (longitud >= 120 && longitud <= 129){
+			contador.classList.add("green");
+			contador.classList.remove("red");
+		}else if (longitud >=130 && longitud <= 140){
+			contador.classList.add("red");
+		}else {
+			contador.classList.remove("green", "red");
+		};
+		// desabilitar el boton
+		if (longitud > maxCaracteres){
+			boton.disabled = true;
 		};
 	});
 });
