@@ -28,7 +28,6 @@ window.addEventListener("load", function() {
 			contador.innerText = maxCaracteres - longitud;
 		}else {
 			contador.innerText = maxCaracteres - longitud;
-		}
-
+		};
 	});
 });
