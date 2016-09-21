@@ -1,6 +1,7 @@
 window.addEventListener("load", function() {
 	var boton = document.getElementById("boton");
 	var textArea = document.getElementById("textArea");
+	var maxCaracteres = 140;
 	boton.addEventListener("click", function(e) {
         e.preventDefault(); //para que no aparezca en la url a pesar que es tipo submit
 		var text = textArea.value;
@@ -16,17 +17,15 @@ window.addEventListener("load", function() {
         var contenedor = document.getElementById("mensajes");
         //insertar hora de tweet
         var hora = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
-
         div.innerText = text+ " " + hora;
         contenedor.insertBefore(div,contenedor.childNodes[0]);
 	}
 	function regular(){
 		textArea.style.cssText = "height:auto";
 	}
-	
+
 	textArea.addEventListener("keydown", function(e){
 		boton.disabled = false;
-		var maxCaracteres = 140;
 		var valor = document.getElementById("textArea").value;
 		var longitud = valor.length;
 		var contador = document.getElementById("contador");

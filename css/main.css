@@ -30,6 +30,10 @@ html, body {
 	margin-bottom: 3%;
 	border-radius: 5px;
 }
+.bird {
+	width: 12%;
+	margin: 1.2%;
+}
 .btn{
 	background-color: #1C9DEC;
 	border: 2px solid #fff;
