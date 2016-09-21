@@ -72,3 +72,24 @@ html, body {
 	font-weight: bold;
     font-size: 1.2em;
 }
+/*-----Responsive--------*/
+@media (max-width: 1024px){
+	body{
+	font-size: 16px;
+	}
+}
+@media (max-width: 982px){
+	body{
+	font-size: 14px;
+	}
+}
+@media (max-width: 768px){
+	body{
+	font-size: 14px;
+	}
+}
+@media (max-width: 640px){
+	body{
+	font-size: 12px;
+	}
+}

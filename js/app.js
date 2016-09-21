@@ -15,26 +15,35 @@ window.addEventListener("load", function() {
         div.className = "nuevoMensaje";
         var contenedor = document.getElementById("mensajes");
         //insertar hora de tweet
-        var n = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
+        var hora = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
 
-        div.innerText = text+ " " + n;
+        div.innerText = text+ " " + hora;
         contenedor.insertBefore(div,contenedor.childNodes[0]);
 	}
-
+	function regular(){
+		textArea.style.cssText = "height:auto";
+	}
+	
 	textArea.addEventListener("keydown", function(e){
 		boton.disabled = false;
 		var maxCaracteres = 140;
 		var valor = document.getElementById("textArea").value;
 		var longitud = valor.length;
 		var contador = document.getElementById("contador");
-		//contador.className = "nuevoMensaje";
-
+		btnDisabled(longitud, maxCaracteres);
+		changeColor(longitud,maxCaracteres);
+	});
+	function btnDisabled(longitud,maxCaracteres){
+		if (longitud > maxCaracteres){
+			boton.disabled = true;
+		};
 		if(longitud < maxCaracteres){
 			contador.innerText = maxCaracteres - longitud;
 		}else {
 			contador.innerText = maxCaracteres - longitud;
 		};
-		//cambio de color
+	}
+	function changeColor(longitud, maxCaracteres){
 		if (longitud >= 120 && longitud <= 129){
 			contador.classList.add("green");
 			contador.classList.remove("red");
@@ -43,21 +52,14 @@ window.addEventListener("load", function() {
 		}else {
 			contador.classList.remove("green", "red");
 		};
-		// desabilitar el boton
-		if (longitud > maxCaracteres){
-			boton.disabled = true;
-		};
-	});
+	}
 
 	textArea.addEventListener("keydown", autosize); 
 	function autosize(){
-	  var el = this;
-	  setTimeout(function(){
-	    el.style.cssText = "height:auto; padding:0";
-	    el.style.cssText = "height:" + el.scrollHeight + 'px';
-	  },0);
+		setTimeout(function(){
+    		textArea.style.cssText = "height:auto";
+	    	textArea.style.cssText = "height:" + textArea.scrollHeight + 'px';
+  		},0);
 	}
-	function regular(){
-		textArea.style.cssText = "height:auto";
-	}
+		
 });
