@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
 		mensaje(text);
 		textArea.value = "";
 		boton.disabled = true;
+		contador.innerText = 140;
 		regular();
 	});
 	function mensaje (text) {
