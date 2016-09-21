@@ -50,7 +50,6 @@ window.addEventListener("load", function() {
 	});
 
 	textArea.addEventListener("keydown", autosize); 
-
 	function autosize(){
 	  var el = this;
 	  setTimeout(function(){
