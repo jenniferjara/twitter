@@ -9,7 +9,6 @@ window.addEventListener("load", function() {
 		textArea.value = "";
 		boton.disabled = true;
 		contador.innerText = 140;
-		regular();
 	});
 	function mensaje (text) {
 		//insertar texto
@@ -21,10 +20,6 @@ window.addEventListener("load", function() {
         div.innerText = text+ " " + hora;
         contenedor.insertBefore(div,contenedor.childNodes[0]);
 	}
-	function regular(){
-		textArea.style.cssText = "height:auto";
-	}
-
 	textArea.addEventListener("keydown", function(e){
 		boton.disabled = false;
 		var valor = document.getElementById("textArea").value;
@@ -56,10 +51,8 @@ window.addEventListener("load", function() {
 
 	textArea.addEventListener("keydown", autosize); 
 	function autosize(){
-		setTimeout(function(){
-    		textArea.style.cssText = "height:auto";
-	    	textArea.style.cssText = "height:" + textArea.scrollHeight + 'px';
-  		},0);
+	    	textArea.style.cssText = "height: auto";
+        	textArea.style.cssText = "height: " + textArea.scrollHeight + "px";
 	}
-		
+	textArea.value = "";	
 });

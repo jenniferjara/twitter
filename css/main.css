@@ -29,6 +29,7 @@ html, body {
 	width: 80%;
 	margin-bottom: 3%;
 	border-radius: 5px;
+	overflow: hidden;
 }
 .bird {
 	width: 12%;
