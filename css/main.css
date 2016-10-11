@@ -21,15 +21,17 @@ html, body {
 .content{
     width: 50%;
 	background-color: rgba(30,144,255,0.5);
-	padding: 1%;
+	padding: 4%;
 	text-align: center;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .content textarea {
-	width: 80%;
+	display: block;
+	width: 100%;
 	margin-bottom: 3%;
 	border-radius: 5px;
 	overflow: hidden;
+	font-size: 1.2em;
 }
 .bird {
 	width: 12%;
@@ -39,9 +41,11 @@ html, body {
 	background-color: #1C9DEC;
 	border: 2px solid #fff;
 	border-radius: 5px;
+	display: block;
 	color: #fff;
 	padding: 2% 3%;
 	cursor: pointer;
+	margin: 0 auto;
 }
 .btn:hover {
 	background-color: #fff;

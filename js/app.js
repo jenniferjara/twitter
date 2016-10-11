@@ -1,33 +1,35 @@
-window.addEventListener("load", function() {
+;(function(){
+	window.addEventListener("load", iniciaPagina);
+	var contenedor = document.getElementById("mensajes");
 	var boton = document.getElementById("boton");
 	var textArea = document.getElementById("textArea");
 	var maxCaracteres = 140;
-	boton.addEventListener("click", function(e) {
-        e.preventDefault(); //para que no aparezca en la url a pesar que es tipo submit
-		var text = textArea.value;
-		mensaje(text);
-		textArea.value = "";
-		boton.disabled = true;
-		contador.innerText = 140;
-	});
-	function mensaje (text) {
-		//insertar texto
-        var div = document.createElement("div");
-        div.className = "nuevoMensaje";
-        var contenedor = document.getElementById("mensajes");
-        //insertar hora de tweet
-        var hora = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
-        div.innerText = text+ " " + hora;
-        contenedor.insertBefore(div,contenedor.childNodes[0]);
+	function iniciaPagina(){
+		boton.addEventListener("click", mensaje);
+		textArea.addEventListener("keydown", cambioTexto);
+		textArea.addEventListener("keydown", autosize); 
 	}
-	textArea.addEventListener("keydown", function(e){
-		boton.disabled = false;
-		var valor = document.getElementById("textArea").value;
+	function mensaje(e) {
+		e.preventDefault();
+		var text = this.previousElementSibling;
+	    var div = document.createElement("div");
+	    var hora = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
+	    div.classList.add("nuevoMensaje");
+	    div.innerText = text.value + " " + hora;
+	    contenedor.appendChild(div);
+
+	    text.value = "";
+	    this.disabled = true;
+	    contador.innerText = 140;
+	}
+	function cambioTexto(){
+		this.nextElementSibling.disabled = false;
+		var valor = this.value;
 		var longitud = valor.length;
 		var contador = document.getElementById("contador");
 		btnDisabled(longitud, maxCaracteres);
 		changeColor(longitud,maxCaracteres);
-	});
+	}
 	function btnDisabled(longitud,maxCaracteres){
 		if (longitud > maxCaracteres){
 			boton.disabled = true;
@@ -48,11 +50,8 @@ window.addEventListener("load", function() {
 			contador.classList.remove("green", "red");
 		};
 	}
-
-	textArea.addEventListener("keydown", autosize); 
 	function autosize(){
-	    	textArea.style.cssText = "height: auto";
-        	textArea.style.cssText = "height: " + textArea.scrollHeight + "px";
+		this.style.cssText = "height: auto";
+		this.style.cssText = "height: " + this.scrollHeight + "px";
 	}
-	textArea.value = "";	
-});
+})();
