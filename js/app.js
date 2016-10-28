@@ -12,15 +12,23 @@
 	function mensaje(e) {
 		e.preventDefault();
 		var text = this.previousElementSibling;
-	    var div = document.createElement("div");
-	    var hora = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
-	    div.classList.add("nuevoMensaje");
-	    div.innerText = text.value + " " + hora;
-	    contenedor.appendChild(div);
+		var div = document.createElement("div");
+		var tweet = document.createElement("span");
+		var boxHour = document.createElement("span");
+		var hora = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
+	   /* div.innerText = text.value + " " + hora;*/
+	    tweet.classList.add("tweet");
+	    boxHour.classList.add("tweet");
+		tweet.innerText = text.value;
+		boxHour.innerText = hora;
+		div.appendChild(tweet);
+		div.appendChild(boxHour);
+		div.classList.add("nuevoMensaje");
+		contenedor.appendChild(div);
 
-	    text.value = "";
-	    this.disabled = true;
-	    contador.innerText = 140;
+		text.value = "";
+		this.disabled = true;
+		contador.innerText = 140;
 	}
 	function cambioTexto(){
 		this.nextElementSibling.disabled = false;
@@ -44,7 +52,8 @@
 		if (longitud >= 120 && longitud <= 129){
 			contador.classList.add("green");
 			contador.classList.remove("red");
-		}else if (longitud >=130 && longitud <= maxCaracteres){
+		}else if (longitud >=130 && 
+			longitud <= maxCaracteres){
 			contador.classList.add("red");
 		}else {
 			contador.classList.remove("green", "red");
