@@ -57,12 +57,12 @@ html, body {
 	border-radius: 5px;
     margin: 1.5% auto;
     padding: 1%;
-    word-wrap: break-word;
 }
 .tweet{
 	padding: 2%;
-	display: inline-block;
-	word-wrap: break-word;
+	overflow-wrap: break-word;
+    display: block;
+    text-align: left;
 }
 /*--Cambio colores--*/
 .white {
@@ -74,6 +74,7 @@ html, body {
 	color: #75D701;
 	font-weight: bold;
     font-size: 1.2em;
+    margin: 3% 0%;
 }
 .red {
 	color: #FF0000;
