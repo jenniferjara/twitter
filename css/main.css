@@ -25,6 +25,8 @@ html, body {
 	text-align: center;
     border-radius: 15px;
 }
+#contador{margin: 3% 0%;}
+
 .content textarea {
 	display: block;
 	width: 100%;
