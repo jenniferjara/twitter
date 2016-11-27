@@ -4,10 +4,11 @@
 	var boton = document.getElementById("boton");
 	var textArea = document.getElementById("textArea");
 	var maxCaracteres = 140;
+
 	function iniciaPagina(){
+		boton.disabled = true;
 		boton.addEventListener("click", mensaje);
 		textArea.addEventListener("keydown", cambioTexto);
-		textArea.addEventListener("keydown", autosize); 
 	}
 	function mensaje(e) {
 		e.preventDefault();
@@ -50,17 +51,14 @@
 	}
 	function changeColor(longitud, maxCaracteres){
 		if (longitud >= 120 && longitud <= 129){
-			contador.classList.add("green");
-			contador.classList.remove("red");
+			contador.classList.add("verde");
+			contador.classList.remove("rojo");
 		}else if (longitud >=130 && 
 			longitud <= maxCaracteres){
-			contador.classList.add("red");
+			contador.classList.add("rojo");
+			contador.classList.remove("verde");
 		}else {
-			contador.classList.remove("green", "red");
+			contador.classList.remove("verde", "rojo");
 		};
-	}
-	function autosize(){
-		this.style.cssText = "height: auto";
-		this.style.cssText = "height: " + this.scrollHeight + "px";
 	}
 })();

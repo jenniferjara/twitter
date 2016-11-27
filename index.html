@@ -3,19 +3,39 @@
 <head>
 	<title>Twitter</title>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link type="text/css" rel="stylesheet" href="css/vendor/materialize.css" media="screen">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 	<link rel="stylesheet" href="css/main.css">
-  <link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="favicon.ico">
 </head>
-<body class="flex bg">
-    <div class="content">
-        <img class="bird" src="img/bird.png" alt="twitter">
-        <div class="white" id="contador">140</div>
-        <form>
-          <textarea name="textArea" id="textArea" rows="2"></textarea>
-          <button class="btn" type="submit" id="boton" disabled="true">Tweet!</button>
-        </form>
-        <div id="mensajes"></div>
-    </div>	
+<body class="bg">
+		<nav>
+			<div class="nav-wrapper blue lighten-2">
+				<a href="#" class="brand-logo center">Twitter</a>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row nuevoMensaje white p-3">
+				<div class="col s2">
+					<img class="circle responsive-img" src="img/bird.png" alt="twitter">
+					<div class="celeste center-align" id="contador">140</div>
+				</div>
+				<div class="input-field col s10">
+					<label for="textarea">¿Qué estás pasando?</label>
+					<textarea class="materialize-textarea" name="textArea" id="textArea"></textarea>
+					<button class="btn blue right" type="submit" id="boton">Tweet</button>
+				</div>
+			</div>
+			<div class="row p-3">
+				<div class="col s12">
+					<div id="mensajes"></div>
+				</div>
+			</div>
+		</div>
+
+	<script type="text/javascript" src="js/vendor/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/vendor/materialize.min.js"></script>	
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
