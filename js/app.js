@@ -59,6 +59,7 @@
 			contador.classList.remove("verde");
 		}else {
 			contador.classList.remove("verde", "rojo");
+			contador.classList.add("celeste");
 		};
 	}
 })();

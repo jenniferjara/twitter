@@ -11,26 +11,40 @@
 </head>
 <body class="bg">
 		<nav>
-			<div class="nav-wrapper blue lighten-2">
+			<div class="nav-wrapper light-blue lighten-2">
 				<a href="#" class="brand-logo center">Twitter</a>
 			</div>
 		</nav>
 		<div class="container">
-			<div class="row nuevoMensaje white p-3">
-				<div class="col s2">
-					<img class="circle responsive-img" src="img/bird.png" alt="twitter">
-					<div class="celeste center-align" id="contador">140</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="card">
+						<div class="card-content">
+						  <span class="card-title">Jennifer Jara</span>
+						  <p>Hola, <br>soy front-end developer jr.</p>
+						</div>
+						<div class="card-action">
+						  <a href="https://jenniferjara.github.io/miportafolio/">Portafolio</a>
+						  <a href="https://github.com/jenniferjara">Giuthub</a>
+						  <a href="https://www.youtube.com/c/je2nifer">Youtube</a>
+						</div>
+					</div>
 				</div>
-				<div class="input-field col s10">
-					<label for="textarea">¿Qué estás pasando?</label>
-					<textarea class="materialize-textarea" name="textArea" id="textArea"></textarea>
-					<button class="btn blue right" type="submit" id="boton">Tweet</button>
-				</div>
+				<form class="col s6">
+					<div class="row">
+						<div class="input-field col s12 white">
+							<textarea class="materialize-textarea" name="textArea" id="textArea" placeholder="¿Qué estás pasando?"></textarea>
+							<button class="btn light-blue lighten-2" type="submit" id="boton">Tweet</button>
+							<div class="celeste right" id="contador">140</div>
+						</div>
+					</div>
+				</form>
 			</div>
-			<div class="row p-3">
+			<div class="row">
 				<div class="col s12">
 					<div id="mensajes"></div>
 				</div>
+			</div>
 			</div>
 		</div>
 
