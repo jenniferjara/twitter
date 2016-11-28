@@ -33,5 +33,5 @@ Estuvo separado por versiones:
 
 El siguiente link te llevará al demo: [View Demo](https://jenniferjara.github.io/twitter "Demo")
 
-![imagen](http://i63.tinypic.com/av1r29.png)
+![imagen](http://i68.tinypic.com/2j3ocba.png)
 
